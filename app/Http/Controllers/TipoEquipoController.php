@@ -14,8 +14,8 @@ class TipoEquipoController extends Controller
      */
     public function index()
     {
-        $tipo_equipos=APP\tipo_equipo::paginate(8);
-        return view('tipo_equipo',compact('tipo_equipos'));
+        $tipo_equipos=APP\tipo_equipo::all();
+        return $tipo_equipos;
     }
 
     /**

@@ -14,8 +14,8 @@ class TipoMarcaController extends Controller
      */
     public function index()
     {
-        $tipo_marcas=APP\Tipo_marca::paginate(8);
-        return view('tipo_marca',compact('tipo_marcas'));
+        $tipo_marcas=APP\Tipo_marca::all();
+        return $tipo_marcas;
     }
 
     /**
