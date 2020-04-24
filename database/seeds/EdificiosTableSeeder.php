@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class EdificiosTableSeeder extends Seeder
 {
@@ -12,6 +13,10 @@ class EdificiosTableSeeder extends Seeder
      */
     public function run()
     {
-       
+        DB::table('Edificio')->insert([
+            'id' => Str::random(5),
+            'nombre' => Str::rand(10),
+            
+        ]);
     }
 }
